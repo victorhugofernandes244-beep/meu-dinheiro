@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>Meu Dinheiro</title>
+
+  <!-- Configuração para virar app -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#2ecc71">
+
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      color: #2ecc71;
+    }
+  </style>
 </head>
 <body>
-  <h1>Funcionou 🎉</h1>
-  <p>Se você está vendo isso, o repositório está correto.</p>
+
+  <h1>Meu Dinheiro 💰</h1>
+  <p>Controle simples de gastos.</p>
+
+  <input type="number" placeholder="Digite um gasto">
+  <button>Salvar</button>
+
 </body>
 </html>
